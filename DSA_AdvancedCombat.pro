@@ -17,37 +17,52 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     armor.cpp \
-    armorwithbackdefense.cpp \
-    armorwithoutbackdefense.cpp \
+    armor.cpp \
+    armorwithbackarmor.cpp \
+    armorwithoutbackarmor.cpp \
     armory.cpp \
     calculator.cpp \
     combat.cpp \
     combatant.cpp \
     combatsituation.cpp \
     hero.cpp \
+    hero.cpp \
     main.cpp \
     mainwindow.cpp \
     meleeweapon.cpp \
     npc.cpp \
+    npc.cpp \
+    playablerace.cpp \
     playablerace.cpp \
     rangeweapon.cpp \
+    rangeweapon.cpp \
     weapon.cpp \
+    woundsystem.cpp \
     woundsystem.cpp
 
 HEADERS += \
     armor.h \
+    armorwithbackarmor.h \
     armorwithbackdefense.h \
-    armorwithoutbackdefense.h \
+    armorwithoutbackarmor.h \
     armory.h \
+    armory.h \
+    calculator.h \
     calculator.h \
     combat.h \
     combatant.h \
+    combatant.h \
     combatsituation.h \
+    hero.h \
     hero.h \
     mainwindow.h \
     meleeweapon.h \
+    meleeweapon.h \
+    npc.h \
     npc.h \
     playablerace.h \
+    playablerace.h \
+    rangeweapon.h \
     rangeweapon.h \
     weapon.h \
     woundsystem.h

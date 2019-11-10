@@ -25,6 +25,7 @@ SOURCES += \
     combat.cpp \
     combatant.cpp \
     combatsituation.cpp \
+    creature.cpp \
     hero.cpp \
     hero.cpp \
     main.cpp \
@@ -53,6 +54,7 @@ HEADERS += \
     combatant.h \
     combatant.h \
     combatsituation.h \
+    creature.h \
     hero.h \
     hero.h \
     mainwindow.h \
@@ -74,3 +76,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    classes.qmodel

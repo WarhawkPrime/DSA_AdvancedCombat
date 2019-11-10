@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+//schock, angst, adrenalin???
+
 class Woundsystem
 {
     enum class Hemorrhage {

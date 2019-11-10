@@ -1,12 +1,12 @@
-#ifndef ARMORWITHBACKARMOR_H
-#define ARMORWITHBACKARMOR_H
+#ifndef ARMORWITHBACKDEFENSE_H
+#define ARMORWITHBACKDEFENSE_H
 
 #include <QObject>
 
-class ArmorWithBackArmor
+class ArmorWithBackDefense
 {
 public:
-    ArmorWithBackArmor();
+    ArmorWithBackDefense();
 };
 
-#endif // ARMORWITHBACKARMOR_H
+#endif // ARMORWITHBACKDEFENSE_H

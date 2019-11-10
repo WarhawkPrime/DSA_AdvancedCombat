@@ -1,6 +1,5 @@
 #include "meleeweapon.h"
 
-MeleeWeapon::MeleeWeapon()
-{
-
+QString MeleeWeapon::getName() {
+    return name;
 }

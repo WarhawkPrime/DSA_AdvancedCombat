@@ -5,6 +5,7 @@
 #include "armory.h"
 #include "combatant.h"
 #include "playablerace.h"
+
 #include "hero.h"
 #include "npc.h"
 
@@ -32,7 +33,7 @@ public:
 
 private:
     QVector<Combatsituation*> combatsituations;
-    QVector<Hero*> allHeroes;
+
     QVector<Npc*> allNpcs;
     Armory armory;
 

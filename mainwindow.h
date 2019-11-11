@@ -3,6 +3,13 @@
 
 #include <QMainWindow>
 
+#include "newcombatsitdialog.h"
+#include "combat.h"
+
+#include <QMessageBox>
+#include <QMouseEvent>
+#include <QDebug>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,5 +24,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Combat* combat;
+    NewCombatSitDialog* newCombatSitDialog;
 };
 #endif // MAINWINDOW_H

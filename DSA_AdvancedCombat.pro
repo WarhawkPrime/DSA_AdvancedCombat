@@ -18,8 +18,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     armor.cpp \
     armor.cpp \
-    armorwithbackarmor.cpp \
-    armorwithoutbackarmor.cpp \
+    armorwithbackdefense.cpp \
+    armorwithoutbackdefense.cpp \
     armory.cpp \
     calculator.cpp \
     combat.cpp \
@@ -31,6 +31,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     meleeweapon.cpp \
+    newcombatsitdialog.cpp \
     npc.cpp \
     npc.cpp \
     playablerace.cpp \
@@ -43,9 +44,9 @@ SOURCES += \
 
 HEADERS += \
     armor.h \
-    armorwithbackarmor.h \
     armorwithbackdefense.h \
-    armorwithoutbackarmor.h \
+    armorwithbackdefense.h \
+    armorwithoutbackdefense.h \
     armory.h \
     armory.h \
     calculator.h \
@@ -60,6 +61,7 @@ HEADERS += \
     mainwindow.h \
     meleeweapon.h \
     meleeweapon.h \
+    newcombatsitdialog.h \
     npc.h \
     npc.h \
     playablerace.h \
@@ -70,7 +72,8 @@ HEADERS += \
     woundsystem.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    newcombatsitdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

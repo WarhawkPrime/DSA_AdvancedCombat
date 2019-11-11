@@ -6,6 +6,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    combat = new Combat;
+
+    //NewCombatSitDialog* newCombatSitDialog = new NewCombatSitDialog(this, combat);
+
 }
 
 MainWindow::~MainWindow()

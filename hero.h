@@ -1,29 +1,17 @@
-#ifndef COMBATSITUATION_H
-#define COMBATSITUATION_H
+#ifndef HERO_H
+#define HERO_H
 
-#include "combatant.h"
+#include "playablerace.h"
+#include "woundsystem.h"
 
-//json
-#include <QJsonObject>
-#include <QJsonArray>
-#include <QJsonDocument>
-
-#include <QVector>
 #include <QObject>
 
-class Combatsituation
+class Hero : public PlayableRace
 {
 public:
-    Combatsituation();
-    Combatsituation(QString name);
-    unsigned int newRound();    //methode die für jede Runde neu aufgerufen wird, gibt einen int Wert als Rundenzähler zurück
-
-    QString getName() const {return name;}
-
+    Hero() {}
+    QString getName() {return name;}
 private:
-    QString name;   //zur Identifikation
-    QVector<Combatant*> currentCombatants;  //Heroes dürfen/sollen verändert werden, npcs nicht!!!
-    //evtl mal teams einstellen (später)
 };
 
-#endif // COMBATSITUATION_H
+#endif // HERO_H

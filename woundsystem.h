@@ -24,20 +24,24 @@ Blut: Max von 5000 ml Blut im Körper
     *
     */
 
+    //versch. Blutungen für die Rasse?
+    //größe beeinflusst treffer (bei Kreaturen)
+
 
     enum class Hemorrhage {
-        Klasse_0,
-        Klasse_1,
-        Klasse_2,
-        Klasse_3,
-        Klasse_4
+        Hemorrhage_Klasse_0,
+        Hemorrhage_Klasse_1,
+        Hemorrhage_Klasse_2,
+        Hemorrhage_Klasse_3,
+        Hemorrhage_Klasse_4
     };
     enum class HemorrhageLevel {
-        Grade_0,
-        Grade_1,
-        Grade_3,
-        Grade_4
+        Blutung_Stufe_0,
+        Blutung_Stufe_1,
+        Blutung_Stufe_3,
+        Blutung_Stufe_4
     };
+
     struct Head {
         int bonestructure;
         int musclestructure;

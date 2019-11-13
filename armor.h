@@ -58,8 +58,6 @@ public:
     virtual void setBackBluntDefense() = 0;
     virtual double getBAckBluntDefense() = 0;
 
-
-
 private:
     ArmorValues armorvalues;
     QString name;

@@ -5,10 +5,21 @@
 
 #include <QObject>
 
-class Creature
+class Creature : public Combatant
 {
 public:
-    Creature();
+    Creature() {
+
+    }
+
+    //override aus combatant
+    int rollInitiative() override;
+    bool rollAttack() override;
+    bool rollDefense() override;
+
+    QString getName() override;
+private:
+
 };
 
 #endif // CREATURE_H

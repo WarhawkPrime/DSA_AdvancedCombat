@@ -37,6 +37,7 @@ SOURCES += \
     woundsystem.cpp
 
 HEADERS += \
+    Race.h \
     armor.h \
     armorwithbackdefense.h \
     armorwithoutbackdefense.h \

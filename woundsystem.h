@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+#include "Race.h"
+
 //schock, angst, adrenalin???
 
 class Woundsystem
@@ -26,6 +28,7 @@ Blut: Max von 5000 ml Blut im Körper
 
     //versch. Blutungen für die Rasse?
     //größe beeinflusst treffer (bei Kreaturen)
+    //Ausdauer für den Kampf, wird beeinflusst von Adrenalin, Verletzungen, etc...
 
 
     enum class Hemorrhage {
@@ -41,6 +44,17 @@ Blut: Max von 5000 ml Blut im Körper
         Blutung_Stufe_3,
         Blutung_Stufe_4
     };
+
+    //je nach Rasse wird der Konstruktor anders gesetzt, dabei geht es nicht um eigenschaften wie mut, sondern
+    //rein um die körperlichen Eigenschaften besonders im Bereich Verletztungen etc..
+
+
+    //Jedes Körperteil hat eine knochen und muskel struktur, welche beschädigt/zerstört werden kann.
+    //je nach schwere enstehen schwerwiegende Auswirkungen bis zum totalausfall. Je nach schwere und Art der Verletztung
+    //ist die Blutung vernachlässigbar bis hin zu tödlich in wenigen minuten
+    //Die Auswirkungen sind je nach Bereich etwas anders
+    //Kritische Treffer: Sollen nur bei sehr guten Treffern zustande kommen (evtl prozent von at wert)
+    //Haben dann kritische Auswirkungen auf den kämpfer, auch auf lange bis permanente Weise
 
     struct Head {
         int bonestructure;
@@ -124,10 +138,21 @@ Blut: Max von 5000 ml Blut im Körper
     };
 
 public:
+    //Für jede Rasse einen anderen Konstruktor (zumindest für die großen : Mensch, Elf, Zwerg, Ork, Achaz, Goblin )
     Woundsystem();
-private:
-    const unsigned int MAXBLOOD = 5000;
+    Woundsystem(Race race) {
 
+        /* pro case werden die Werte anders belegt
+        switch (race) {
+        case Race::Elf: break;
+        case Race::Mensch: break;
+
+        }
+        */
+    }
+
+private:
+    //const unsigned int MAXBLOOD = 5000; //evtl untersch. für die versch. Rassen
 
     Head head;
     Chest chest;

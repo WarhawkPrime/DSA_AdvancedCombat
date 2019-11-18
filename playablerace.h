@@ -3,6 +3,7 @@
 
 #include "combatant.h"
 
+#include "Race.h"
 #include "woundsystem.h"
 
 #include "armory.h"
@@ -51,6 +52,12 @@ class PlayableRace : public Combatant
     };
 public:
     PlayableRace();
+
+    PlayableRace(Race race) {
+        //woundsystem wird rasse übergeben
+        Woundsystem woundsystem(race);
+    }
+
     virtual ~PlayableRace() override {}
 
     //override aus combatant
@@ -61,8 +68,11 @@ public:
 
     virtual QString getName() override=0;
 protected:
-    //Race race factory                 fällt evtl raus?
-    //Woundsystem woundsystem;
+    //Rassen haben andere Werte im Wundensystem -> Rasse wird im Konstruktor von PlayableRace angegeben und im Konstruktor dann dem
+    //Woundsystem übergeben, dort wird dann bestimmt welcher Werte Satz genommen wird
+    Race race;
+
+
 
     //Attribute vom Heldendokument die auch von NPCS zum Kampf gebraucht werden
     short unsigned int mu;

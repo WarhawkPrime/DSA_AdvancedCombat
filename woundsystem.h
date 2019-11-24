@@ -152,8 +152,6 @@ public:
     }
 
 private:
-    //const unsigned int MAXBLOOD = 5000; //evtl untersch. für die versch. Rassen
-
     Head head;
     Chest chest;
     Belly belly;
@@ -161,6 +159,24 @@ private:
     Rightarm rightarm;
     Leftleg leftleg;
     Rightleg rightleg;
+
+    int bloodLevel;     //5000 ml, evtl unterschiede bei den Rassen und Geschlecht?, sinkt durch blutungen / abhängig von person/rasse
+
+    int endurance;      //zusammenhang aus Rasse und eigener Person, sinkt durch aktionen, regeneriert langsam bei erholung abhängig von person/rasse
+                        //ergibt sich aus berechneter endurance aus der Playable Race, wert muss hierhin übergeben werden! (Fürs erste)
+
+    int shockLevel;     //schocklevel, steigt bei Verletzungen, Angst, schock hat auswirkung auf ini, at/pa, abhängig von person/rasse
+                        //geht von 0 - 10, bei 10 komplette Starre (eine Runde aussetzten, evtl Probe zum hinfallen?
+                        // bei 5 etwas in die Richtung wie AT/PA-4, INI-4 oder so?
+
+    int fearResistance; //wirkt ähnlich wie Moral, bei zu viel Angst sinkt die zuversicht, wahrscheinlichkeit für Flucht steigt/ abhängig von person/rasse
+                        //ergibt sich aus fear = [(MU + MU + In) / 2], kleine Boni für besonders viel fearResistance um die Unterschied zu erhöhen
+                        //bei trefferm wird auf diesen Wert gewürfelt, erschwert um (schocklevel ? ), bei misswurf gibt es auswirkungen von leichten zögern
+                        //(zb pa-1) bishin zur erzwungenen Flucht
+
+    int adrenalin;      //wirkt gegen den Schock, unabhängig von person/rasse, erhöt sich leicht bei Verletzungen und gleicht den Schock etwas aus ???
+                        //wirkt nur eine bestimmte Zeit lang bevor man in eine art loch fällt
+
 };
 
 #endif // WOUNDSYSTEM_H

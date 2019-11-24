@@ -27,6 +27,8 @@ class Combat
 {
 public:
     Combat();
+
+
     //erstellt neue Kampfsituation
     void createNewCombatsituation(QString name);
 

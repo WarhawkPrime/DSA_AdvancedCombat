@@ -3,6 +3,7 @@
 
 #include "combatant.h"
 
+#include "Race.h"
 #include "woundsystem.h"
 
 #include "armory.h"
@@ -51,15 +52,29 @@ class PlayableRace : public Combatant
     };
 public:
     PlayableRace();
+
+    PlayableRace(Race race) {
+        //woundsystem wird rasse übergeben
+        Woundsystem woundsystem(race);
+    }
+
     virtual ~PlayableRace() override {}
+
+    //override aus combatant
+    int rollInitiative() override;
+    bool rollAttack() override;
+    bool rollDefense() override;
+
 
     virtual QString getName() override=0;
 protected:
-    //Race race factory                 fällt evtl raus?
-    //Woundsystem woundsystem;
-    QVector<Armor*> ownArmor;
-    QVector<Weapon*> ownWeapons;
-    //Attribute vom Hedlendokument die auch von NPCS zum Kampf gebraucht werden
+    //Rassen haben andere Werte im Wundensystem -> Rasse wird im Konstruktor von PlayableRace angegeben und im Konstruktor dann dem
+    //Woundsystem übergeben, dort wird dann bestimmt welcher Werte Satz genommen wird
+    Race race;
+
+
+
+    //Attribute vom Heldendokument die auch von NPCS zum Kampf gebraucht werden
     short unsigned int mu;
     short unsigned int kk;
     short unsigned int ko;
@@ -67,11 +82,25 @@ protected:
     short unsigned int ge;
     short unsigned int kl;
     short unsigned int in;
-    //Werte für den KAmpf, berechnet von den Attributen, Methoden dazu!
+
+    //Werte für den Kampf, berechnet von den Attributen, Methoden dazu!
     short unsigned int baseIni;
     short unsigned int at;
     short unsigned int pa;
     short unsigned int fk;
+
+    //Ausrüstung
+    QVector<Armor*> ownArmor;
+    QVector<Weapon*> ownWeapons;
+
+    HeadArmor headArmor;
+    ChestArmor chestArmor;
+    BellyArmor bellyArmor;
+    LeftArmAmor leftarmArmor;
+    RightArmArmor rightarmArmor;
+    LeftLegArmor leftlegArmor;
+    RightLegArmor rightlegArmor;
+
 };
 
 #endif // PLAYABLERACE_H

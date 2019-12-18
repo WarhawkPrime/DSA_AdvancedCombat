@@ -17,9 +17,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     armor.cpp \
-    armor.cpp \
-    armorwithbackarmor.cpp \
-    armorwithoutbackarmor.cpp \
+    armorwithbackdefense.cpp \
+    armorwithoutbackdefense.cpp \
     armory.cpp \
     calculator.cpp \
     combat.cpp \
@@ -27,50 +26,40 @@ SOURCES += \
     combatsituation.cpp \
     creature.cpp \
     hero.cpp \
-    hero.cpp \
     main.cpp \
     mainwindow.cpp \
     meleeweapon.cpp \
-    npc.cpp \
+    newcombatsitdialog.cpp \
     npc.cpp \
     playablerace.cpp \
-    playablerace.cpp \
-    rangeweapon.cpp \
     rangeweapon.cpp \
     weapon.cpp \
-    woundsystem.cpp \
     woundsystem.cpp
 
 HEADERS += \
+    Race.h \
     armor.h \
-    armorwithbackarmor.h \
     armorwithbackdefense.h \
-    armorwithoutbackarmor.h \
+    armorwithoutbackdefense.h \
     armory.h \
-    armory.h \
-    calculator.h \
     calculator.h \
     combat.h \
-    combatant.h \
     combatant.h \
     combatsituation.h \
     creature.h \
     hero.h \
-    hero.h \
     mainwindow.h \
     meleeweapon.h \
-    meleeweapon.h \
-    npc.h \
+    newcombatsitdialog.h \
     npc.h \
     playablerace.h \
-    playablerace.h \
-    rangeweapon.h \
     rangeweapon.h \
     weapon.h \
     woundsystem.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    newcombatsitdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -78,4 +67,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    Notes \
     classes.qmodel

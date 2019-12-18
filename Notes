@@ -1,0 +1,87 @@
+Kopf:
+    Knochenstruktur: 20
+    Muskelstruktur: 15
+    Schock * 2: Bewusstlosigkeit, Gehirnerschütterung
+    Kritische Treffer: Kehle, Augen, Gehirn,
+
+Brust:
+    Knochenstruktur: 20
+    Muskelstruktur: 15
+    Schock * 1 1/2:
+    Kritische Treffer: Herz, Lungen, Rippen, Schlüselbein
+
+Bauch:
+    Knochenstruktur: 0
+    Muskelstruktur: 20
+    Schock * 1 1/2:
+    Kritische Treffer: Darm, Magen, Nieren, Leber
+
+Linker Arm:
+    Knochenstruktur: 15
+    Muskelstruktur: 20
+    Schock * 1
+    Kritische Treffer: Finger, Handgelenk, Ellenbogen, Schulter, Arterie
+
+Rechter Arm:
+    Knochenstruktur: 15
+    Muskelstruktur: 20
+    Schock * 1
+    Kritische Treffer: Finger, Handgelenk, Ellenbogen, Schulter, Arterie
+
+Linkes Bein:
+    Knochenstruktur: 20
+    Muskelstruktur: 20
+    Schock * 1
+    Kritische Treffer: Fuß, Kniegelenk, Arterie, Hüfte
+
+Rechtes Bein:
+    Knochenstruktur: 20
+    Muskelstruktur: 20
+    Schock * 1
+    Kritische Treffer: Fuß, Kniegelenk, Arterie, Hüfte
+
+
+//gehört in den Calculator und nicht in das Wundensystem
+//kritische Treffer gehören auch in den Calculator (also welche wo möglich sind und wo getroffen wurde, etc) Nur die Auswirkungen gehen auf das
+//Wundensystem
+
+                    |||Stab     |||Slash |||Blunt |||
+=====================================================
+Knochenstruktur:    |||(*1/4)   |||(*1/2)|||(*1)  |||
+Muskelstruktur:     |||(*1/2)   |||(*1)  |||(*1/4)|||
+Schock:             |||(*1 1/2) |||(*1/2)|||(*1)  |||
+Blut:               |||(*1 1/2) |||(*1)  |||(*1/4)|||
+
+
+//gehört in das Wundensystem
+Blut: Max von 5000 ml Blut im Körper
+      Klasse 1 Hemorrhage: Bis zu 15% (750ml) Blutverlust. Keine Vitale Veränderung, keine Transfusion notwendig
+      Klasse 2 Hemorrhage: Von 15% bis 30% (1500ml) Blutverlust. Auswirkungen merkbar (schlechter sehen, erhöter Herzschlag, bleich und kälter), keine Transfusion notwendig
+      Klasse 3 Hemorrhage: Von 30% bis 40% (2000ml) Blutverlust. fallender Blutdruck, Schock, mentaler zustand verschlimmert. Fusion meistens notwendig
+      Klasse 4 Hemorrhage: Über 40% Blutverlust (2000ml). Aggressive Wiederbelebungsmaßnahmen notwendig.
+
+      Blutungsstufen:
+      Grade 0: No Bleeding:
+      Grade 1: Petechiale Blutung: 100% (5000ml) in 24H (Vernachlässigbar)
+      Grade 2: leichte Blutung: 50% (2500ml) in 3H
+      Grad 3: Schwere Blutung: >150ml pro Minute: benötigt Transfusion
+      Grad 4: Schwächende Blutung: benötigt sofortige Transfusion von Plasma und Thrombozyten. Tod Wahrscheinlich
+
+Angst: Wird gewürfelt für jdenen Treffer den man einstecken muss
+       Probe auf Mut um hälfte des (höheren) Schadens erschwert
+       Geschafft: keine Auswirkungen
+       Geschafft mit ca. 3/4 unter dem Mu Wert übrig: Adrenalin + 1 (dauerhaft um 1 erhöt)
+                                                      Initiative Mod + 2 (für 5 Runden)
+       Geschafft mit 1: Initiative + 3 für 5 Runden
+                        Adrenalin +2
+       Nicht geschafft: Initiative - 2;               (für 5 Runden)
+       Nicht geschafft mit ca 1/4 des Mut Wertes über den Mut Wert: Initiative -6
+                                                                    Adrenalin -1
+                                                                    Versuch aus dem Kampf zu fliehen
+       Nicht geschafft mit 20: Starr vor Schreck für 2 Runden, danach aus dem Kampf fliehen
+
+Adrenalin: Adrenalin = (Mu / 3) (ganze Zahlen)
+Schock: Schock = (SchockSchaden +2 - Adrenalin)
+        Schock Tabelle:      1|2|3|4|5|6|7|8|9|10|
+        Schock Auswirkungen
+        kurz Atem weg, zusammenkrümmen, schwindel, Bewusstlosigkeit, Hinfallen, Gehirnerschütterung, Herzinfakt, Schockstarre

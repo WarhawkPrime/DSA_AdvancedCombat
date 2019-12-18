@@ -65,6 +65,9 @@ private:
     QString name;
     unsigned int armorIntegrity;    //"Gesundheit" der Rüstung Bei Werten wie 75%,50%,25%,0% auswirkungen
     short unsigned int breakMod;    //faktor von 1-6(10?) um den die Rüstung kaputt gehen kann
+
+
+    //dies ist ein test von M
 };
 
 #endif // ARMOR_H

@@ -15,6 +15,7 @@ public:
     Weapon* getWeaponByIndex(int index);
 private:
     QVector<Armor*> armor;
+//test vin d
     QVector<Weapon*> weapons;
 };
 

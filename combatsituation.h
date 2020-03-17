@@ -21,7 +21,7 @@ class Combatsituation
 {
 public:
     Combatsituation();
-    Combatsituation(QString name) : name{name} {
+    Combatsituation(QString name, QString description) : name{name}, description{description} {
         roundCounter = 0;
     }
 
@@ -34,12 +34,17 @@ public:
 
     QString getName() const {return name;}
 
+    QString getDescription() const {return description;}
+    void setDescription(QString description) {this->description = description;}
+
 private:
     //jede Kampfsituation besitzt einen Rundenzähler. Fängt bei 1 an, wird pro Runde um 1 erhöt, kann extern abgefragt werden, getter/setter!
     unsigned int roundCounter;
     QString name;   //zur Identifikation
+    QString description;
     QVector<Combatant*> currentCombatants;  //Heroes dürfen/sollen verändert werden, npcs nicht!!!
     //evtl mal teams einstellen (später)
+
 };
 
 #endif // COMBATSITUATION_H

@@ -5,8 +5,8 @@ Combat::Combat()
 
 }
 
-void Combat::createNewCombatsituation(QString name) {
-    Combatsituation* newCombatsituation = new Combatsituation(name);
+void Combat::createNewCombatsituation(QString name, QString description) {
+    Combatsituation* newCombatsituation = new Combatsituation(name, description);
     combatsituations.push_back(newCombatsituation);
 }
 

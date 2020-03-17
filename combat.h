@@ -30,7 +30,7 @@ public:
 
 
     //erstellt neue Kampfsituation
-    void createNewCombatsituation(QString name);
+    void createNewCombatsituation(QString name, QString description);
 
     //Soll möglich sein wenn man eine neue Kampfsituation frisch erstellt aber auch danach bevor der Kampf beginnt
     //Name als Key, es darf keine 2 gleichen Combatants/Combatsituations geben!

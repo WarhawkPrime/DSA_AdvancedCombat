@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "newcombatsitdialog.h"
+#include "maincombatwidget.h"
 #include "combat.h"
 
 #include <QMessageBox>
@@ -27,9 +28,14 @@ private slots:
 
     void on_actionSpeichern_und_Beenden_triggered();
 
+    void on_tableWidgetCombatSituations_cellClicked(int row, int column);
+
+    void on_tableWidgetCombatSituations_cellDoubleClicked(int row, int column);
+
 private:
     Ui::MainWindow *ui;
     Combat* combat;
     NewCombatSitDialog* newCombatSitDialog;
+    MainCombatWidget* mainCombatWidget;
 };
 #endif // MAINWINDOW_H

@@ -10,6 +10,12 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="font">
    <font>
     <family>Arial Black</family>
@@ -22,49 +28,87 @@
    <string>Hauptmenü</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(254, 255, 138);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidgetCombatSituations">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>256</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>8</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">selection-color: rgb(255, 0, 0);</string>
-    </property>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>256</number>
-    </attribute>
-    <column>
-     <property name="text">
-      <string>Kampfsituationen</string>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial Black</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="textAlignment">
-      <set>AlignCenter</set>
-     </property>
-    </column>
-   </widget>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidgetCombatSituations">
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">selection-color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>500</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>500</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Combatsituation</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Description</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -89,10 +133,10 @@
    <widget class="QMenu" name="menuMen">
     <property name="geometry">
      <rect>
-      <x>322</x>
-      <y>107</y>
-      <width>273</width>
-      <height>124</height>
+      <x>157</x>
+      <y>85</y>
+      <width>269</width>
+      <height>360</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -110,10 +154,18 @@
      </font>
     </property>
     <property name="title">
-     <string>Menü</string>
+     <string>Main Menu</string>
     </property>
     <addaction name="actionNeue_Kampfsituation"/>
+    <addaction name="actionNeuer_Held"/>
+    <addaction name="actionNeuer_NPC"/>
     <addaction name="actionSpeichern_und_Beenden"/>
+    <addaction name="actionNew_Weapon"/>
+    <addaction name="actionNew_Armor"/>
+    <addaction name="actionAll_Heroes"/>
+    <addaction name="actionAll_Npc_s"/>
+    <addaction name="actionAll_Weapon_s"/>
+    <addaction name="actionAll_Armor"/>
    </widget>
    <addaction name="menuMen"/>
   </widget>
@@ -134,6 +186,46 @@
   <action name="actionSpeichern_und_Beenden">
    <property name="text">
     <string>Speichern und Beenden</string>
+   </property>
+  </action>
+  <action name="actionNeuer_Held">
+   <property name="text">
+    <string>Neuer Held</string>
+   </property>
+  </action>
+  <action name="actionNeuer_NPC">
+   <property name="text">
+    <string>Neuer NPC</string>
+   </property>
+  </action>
+  <action name="actionNew_Weapon">
+   <property name="text">
+    <string>New Weapon</string>
+   </property>
+  </action>
+  <action name="actionNew_Armor">
+   <property name="text">
+    <string>New Armor</string>
+   </property>
+  </action>
+  <action name="actionAll_Heroes">
+   <property name="text">
+    <string>All Heroes</string>
+   </property>
+  </action>
+  <action name="actionAll_Npc_s">
+   <property name="text">
+    <string>All Npc's</string>
+   </property>
+  </action>
+  <action name="actionAll_Weapon_s">
+   <property name="text">
+    <string>All Weapons</string>
+   </property>
+  </action>
+  <action name="actionAll_Armor">
+   <property name="text">
+    <string>All Armor</string>
    </property>
   </action>
  </widget>

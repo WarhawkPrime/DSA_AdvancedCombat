@@ -19,7 +19,7 @@ void NewCombatSitDialog::on_pushButton_clicked()
 {
 
     //Name einlesen und neue kampfsituation erstellen
-    combat->createNewCombatsituation(ui->lineEdit->text());
+    combat->createNewCombatsituation(ui->lineEdit->text(), ui->textEdit->toPlainText() );
 
     //Zur Kontrolle, durch unit test erstetzten und später löschen, dient aktuell nur zur Kontrolle!
     QMessageBox::information(this, "Anzahl an KampfSituationen", QString::number(combat->getCombatsituationsSize()) , QMessageBox::Ok);

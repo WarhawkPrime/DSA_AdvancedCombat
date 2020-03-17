@@ -27,10 +27,12 @@ SOURCES += \
     creature.cpp \
     hero.cpp \
     main.cpp \
+    maincombatwidget.cpp \
     mainwindow.cpp \
     meleeweapon.cpp \
     newcombatsitdialog.cpp \
     npc.cpp \
+    observer.cpp \
     playablerace.cpp \
     rangeweapon.cpp \
     weapon.cpp \
@@ -48,16 +50,19 @@ HEADERS += \
     combatsituation.h \
     creature.h \
     hero.h \
+    maincombatwidget.h \
     mainwindow.h \
     meleeweapon.h \
     newcombatsitdialog.h \
     npc.h \
+    observer.h \
     playablerace.h \
     rangeweapon.h \
     weapon.h \
     woundsystem.h
 
 FORMS += \
+    maincombatwidget.ui \
     mainwindow.ui \
     newcombatsitdialog.ui
 

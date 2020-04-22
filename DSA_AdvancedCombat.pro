@@ -16,55 +16,61 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    armor.cpp \
-    armorwithbackdefense.cpp \
-    armorwithoutbackdefense.cpp \
-    armory.cpp \
-    calculator.cpp \
-    combat.cpp \
-    combatant.cpp \
-    combatsituation.cpp \
-    creature.cpp \
-    hero.cpp \
+    gui/addcombatantdialog.cpp \
+    gui/addnewnpcdialog.cpp \
+    armory/armor.cpp \
+    armory/armorwithbackdefense.cpp \
+    armory/armorwithoutbackdefense.cpp \
+    armory/armory.cpp \
+    engine/calculator.cpp \
+    engine/combat.cpp \
+    combatant/combatant.cpp \
+    engine/combatsituation.cpp \
+    combatant/creature.cpp \
+    combatant/hero.cpp \
     main.cpp \
-    maincombatwidget.cpp \
-    mainwindow.cpp \
-    meleeweapon.cpp \
-    newcombatsitdialog.cpp \
-    npc.cpp \
-    observer.cpp \
-    playablerace.cpp \
-    rangeweapon.cpp \
-    weapon.cpp \
-    woundsystem.cpp
+    gui/maincombatwidget.cpp \
+    gui/mainwindow.cpp \
+    armory/meleeweapon.cpp \
+    gui/newcombatsitdialog.cpp \
+    combatant/npc.cpp \
+    engine/observer.cpp \
+    combatant/playablerace.cpp \
+    armory/rangeweapon.cpp \
+    armory/weapon.cpp \
+    engine/woundsystem.cpp
 
 HEADERS += \
-    Race.h \
-    armor.h \
-    armorwithbackdefense.h \
-    armorwithoutbackdefense.h \
-    armory.h \
-    calculator.h \
-    combat.h \
-    combatant.h \
-    combatsituation.h \
-    creature.h \
-    hero.h \
-    maincombatwidget.h \
-    mainwindow.h \
-    meleeweapon.h \
-    newcombatsitdialog.h \
-    npc.h \
-    observer.h \
-    playablerace.h \
-    rangeweapon.h \
-    weapon.h \
-    woundsystem.h
+    combatant/Race.h \
+    gui/addcombatantdialog.h \
+    gui/addnewnpcdialog.h \
+    armory/armor.h \
+    armory/armorwithbackdefense.h \
+    armory/armorwithoutbackdefense.h \
+    armory/armory.h \
+    engine/calculator.h \
+    engine/combat.h \
+    combatant/combatant.h \
+    engine/combatsituation.h \
+    combatant/creature.h \
+    combatant/hero.h \
+    gui/maincombatwidget.h \
+    gui/mainwindow.h \
+    armory/meleeweapon.h \
+    gui/newcombatsitdialog.h \
+    combatant/npc.h \
+    engine/observer.h \
+    combatant/playablerace.h \
+    armory/rangeweapon.h \
+    armory/weapon.h \
+    engine/woundsystem.h
 
 FORMS += \
-    maincombatwidget.ui \
-    mainwindow.ui \
-    newcombatsitdialog.ui
+    gui/addcombatantdialog.ui \
+    gui/addnewnpcdialog.ui \
+    gui/maincombatwidget.ui \
+    gui/mainwindow.ui \
+    gui/newcombatsitdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -74,3 +80,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     Notes \
     classes.qmodel
+
+RESOURCES += \
+    resource.qrc
